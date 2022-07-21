@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-service
+spec:
+  type: LoadBalancer
+  externalIPs:
+    - "3.81.59.163"
+  selector:
+    app: api
+  ports:
+  - port: 5000
+    targetPort: 5000
